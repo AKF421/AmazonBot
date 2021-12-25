@@ -1,4 +1,5 @@
 import pyautogui
+import keyboard
 import time
 
 
@@ -7,7 +8,7 @@ class BuyCard(object):
     @staticmethod
     def buy(email):
         # opens QuickTime Player
-        pyautogui.moveTo(825, 765, 1.5)
+        pyautogui.moveTo(800, 765, 1.5)
         pyautogui.click()
         time.sleep(5)
 
@@ -17,7 +18,7 @@ class BuyCard(object):
         time.sleep(1)
 
         # right click QuickTime Player
-        pyautogui.moveTo(825, 765, 1.5)
+        pyautogui.moveTo(800, 765, 1.5)
         pyautogui.rightClick()
         time.sleep(1)
 
@@ -32,7 +33,7 @@ class BuyCard(object):
         time.sleep(1)
 
         # opens Google from PyCharm
-        pyautogui.moveTo(515, 770, 1.5)
+        pyautogui.moveTo(550, 770, 1.5)
         pyautogui.click()
         time.sleep(1)
         pyautogui.click()
@@ -46,7 +47,9 @@ class BuyCard(object):
         # Go to search bar and type amazon.com
         pyautogui.moveTo(150, 85, 1)
         pyautogui.click()
-        pyautogui.typewrite('amazon.com\n', 0.5)
+        keyboard.write("amazon.com")
+        # type("amazon.com")
+        pyautogui.press('enter')
         time.sleep(5)
 
         # Navigate to gift cards
@@ -82,12 +85,14 @@ class BuyCard(object):
         pyautogui.moveTo(655, 590, 1)
         time.sleep(1)
         pyautogui.click()
+        time.sleep(.7)
 
         for _ in "Jimmy Nguyen":
             pyautogui.press('backspace')
-            time.sleep(.5)
+            time.sleep(.7)
 
-        pyautogui.typewrite("Not Jimmy :]", .6)
+        keyboard.write("Not Jimmy :]")
+        # type("Not Jimmy :]")
         time.sleep(1)
         # Moves to email section
         pyautogui.moveTo(550, 525, 1)
@@ -97,7 +102,9 @@ class BuyCard(object):
 
         # Types email
         # change email to email[0] after testing
-        pyautogui.typewrite(email, 0.5)
+        time.sleep(1)
+        keyboard.write(email[0])
+        # type(email[0])
         time.sleep(1)
 
         # Scrolls back up and clicks 'Buy Now'
@@ -119,11 +126,11 @@ class BuyCard(object):
         # Buy
         pyautogui.moveTo(1045, 280, .2)
         time.sleep(1)
-        pyautogui.click()
+        # pyautogui.click()
         time.sleep(10)
 
         # Stops screen recording
-        pyautogui.moveTo(655, 13, 1)
+        pyautogui.moveTo(688, 13, 1)
         pyautogui.click()
         time.sleep(2)
 
@@ -133,7 +140,7 @@ class BuyCard(object):
         time.sleep(1)
 
         # Reopens Google
-        pyautogui.moveTo(515, 770, 1.5)
+        pyautogui.moveTo(550, 770, 1.5)
         time.sleep(1)
         pyautogui.click()
         time.sleep(2)
@@ -142,11 +149,14 @@ class BuyCard(object):
         pyautogui.moveTo(355, 50, 1.5)
         pyautogui.click()
         time.sleep(2)
-        pyautogui.typewrite('photos.google.com\n', .5)
+
+        keyboard.write("photos.google.com")
+        pyautogui.press('enter')
+        # type("photos.google.com")
         time.sleep(5)
 
         # Opens Finder
-        pyautogui.moveTo(345, 765, 1)
+        pyautogui.moveTo(360, 765, 1)
         pyautogui.click()
         time.sleep(1)
 
@@ -156,14 +166,14 @@ class BuyCard(object):
         time.sleep(1)
 
         # Turns into grid display
-        pyautogui.moveTo(605, 50, .5)
+        pyautogui.moveTo(704, 50, .5)
         pyautogui.click()
         time.sleep(1)
 
         # Hovers over .mov file and drags to google photos
         pyautogui.moveTo(465, 125, .25)
         time.sleep(2)
-        pyautogui.dragTo(650, 390, 5, button='left')
+        pyautogui.dragTo(800, 670, 5, button='left')
         time.sleep(60)
 
         # Clicks on video and creates shared link
@@ -192,7 +202,7 @@ class BuyCard(object):
         time.sleep(1)
 
         # Open discord
-        pyautogui.moveTo(620, 765, 1)
+        pyautogui.moveTo(650, 765, 1)
         pyautogui.click()
         time.sleep(1)
 
@@ -212,4 +222,13 @@ class BuyCard(object):
         pyautogui.moveTo(415, 690, 1)
         pyautogui.click()
         time.sleep(1)
-        pyautogui.typewrite("This was all done by a computer!\n", 0.5)
+        keyboard.write("A program bought the gift card and recorded this video! If something went wrong, blame my "
+                       "creator.")
+        pyautogui.press('enter')
+        # type("A program bought the gift card and recorded this video! If something went wrong, blame my creator.")
+
+    # @staticmethod
+    # def type(phrase):
+    #     for x in phrase:
+    #         pyautogui.press(x)
+    #         time.sleep(1.5)
