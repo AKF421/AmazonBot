@@ -1,14 +1,25 @@
 import pyautogui
-import sched, time
+# import time
+# import ReadEmail
+from BuyCard import BuyCard
+#
+pyautogui.FAILSAFE = True
+# read_email = ReadEmail
+buy_card = BuyCard()
+global email
 
-s = sched.scheduler(time.time, time.sleep)
+
+def main():
+    global email
+    email = read_email.values[0]
+    # email = 'nguyen.hoang.jimmy42@gmail.com'
+    BuyCard.buy(email)
 
 
-def print_mouse_position(sc):
-    print(pyautogui.position())
+if __name__ == "__main__":
+    main()
 
-    s.enter(2, 1, print_mouse_position, (sc,))
-
-
-s.enter(2, 1, print_mouse_position, (s,))
-s.run()
+# Tool for identifying position of something
+#
+# time.sleep(5)
+# print(pyautogui.position())
