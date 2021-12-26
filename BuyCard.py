@@ -65,7 +65,7 @@ class BuyCard(object):
         time.sleep(7)
 
         # Choose stocking photo
-        pyautogui.moveTo(550, 565, 2)
+        pyautogui.moveTo(550, 565, .5)
         pyautogui.click()
         time.sleep(1)
         pyautogui.click()
@@ -75,7 +75,7 @@ class BuyCard(object):
         pyautogui.scroll(-10)
         time.sleep(2)
         # Goes to $25 option
-        pyautogui.moveTo(550, 435, .2)
+        pyautogui.moveTo(560, 435, .2)
         pyautogui.click()
         time.sleep(1)
         pyautogui.click()
@@ -85,17 +85,17 @@ class BuyCard(object):
         pyautogui.moveTo(655, 590, 1)
         time.sleep(1)
         pyautogui.click()
-        time.sleep(.7)
+        time.sleep(.2)
 
         for _ in "Jimmy Nguyen":
             pyautogui.press('backspace')
-            time.sleep(.7)
+            time.sleep(.2)
 
         keyboard.write("Not Jimmy :]")
         # type("Not Jimmy :]")
         time.sleep(1)
         # Moves to email section
-        pyautogui.moveTo(550, 525, 1)
+        pyautogui.moveTo(560, 525, 1)
         time.sleep(1)
         pyautogui.click()
         time.sleep(1)
@@ -130,7 +130,7 @@ class BuyCard(object):
         time.sleep(10)
 
         # Stops screen recording
-        pyautogui.moveTo(688, 13, 1)
+        pyautogui.moveTo(691, 13, 1)
         pyautogui.click()
         time.sleep(2)
 
