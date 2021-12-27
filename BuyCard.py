@@ -58,7 +58,7 @@ class BuyCard(object):
         time.sleep(5)
 
         # scroll to eGift cards and click See Options
-        pyautogui.scroll(-15)
+        pyautogui.scroll(-10)
         time.sleep(2)
         pyautogui.moveTo(265, 600, 1)
         pyautogui.click()
@@ -222,8 +222,7 @@ class BuyCard(object):
         pyautogui.moveTo(415, 690, 1)
         pyautogui.click()
         time.sleep(1)
-        keyboard.write("A program bought the gift card and recorded this video! If something went wrong, blame my "
-                       "creator.")
+        keyboard.write("A program bought the gift card and recorded this video! If something went wrong, blame my creator.")
         pyautogui.press('enter')
         # type("A program bought the gift card and recorded this video! If something went wrong, blame my creator.")
 

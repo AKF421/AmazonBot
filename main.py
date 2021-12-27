@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
 # # Tool for identifying position of something
 # #
-# # time.sleep(5)
-# # pyautogui.scroll(-10)
+# time.sleep(5)
+# pyautogui.scroll(-10)
 # time.sleep(5)
 # print(pyautogui.position())
