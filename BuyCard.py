@@ -50,12 +50,12 @@ class BuyCard(object):
         keyboard.write("amazon.com")
         # type("amazon.com")
         pyautogui.press('enter')
-        time.sleep(5)
+        time.sleep(10)
 
         # Navigate to gift cards
         pyautogui.moveTo(110, 180, .5)
         pyautogui.click()
-        time.sleep(5)
+        time.sleep(10)
 
         # scroll to eGift cards and click See Options
         pyautogui.scroll(-10)
@@ -126,7 +126,7 @@ class BuyCard(object):
         # Buy
         pyautogui.moveTo(1045, 280, .2)
         time.sleep(1)
-        # pyautogui.click()
+        pyautogui.click()
         time.sleep(10)
 
         # Stops screen recording
@@ -204,7 +204,7 @@ class BuyCard(object):
         # Open discord
         pyautogui.moveTo(650, 765, 1)
         pyautogui.click()
-        time.sleep(1)
+        time.sleep(10)
 
         # Paste link
         pyautogui.moveTo(415, 690, 1)

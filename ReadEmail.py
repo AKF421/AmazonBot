@@ -27,6 +27,7 @@ while sheet_empty:
     if values is not None:
         sheet_empty = False
         print('Email obtained.')
+        time.sleep(10)
     else:
         print('Standby ' + str(counter))
         print()
